@@ -1,0 +1,287 @@
+/**
+ * Global Reset of all HTML Elements
+ */
+html,body {
+  border: 0;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+div,span,object,iframe,img,table,caption,thead,tbody,tfoot,tr,td,article,aside,canvas,details,figure,hgroup,menu,nav,footer,header,section,summary,mark,audio,video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,code,del,dfn,em,ins,q,samp,small,strong,sub,sup,b,i,hr,dl,dt,dd,ol,ul,li,fieldset,legend,label {
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,aside,canvas,figure,img,figcaption,hgroup,footer,header,nav,section,audio,video {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table caption,table th,table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  background-color: black;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+#slides {
+  position: relative;
+}
+#slides .slides-container {
+  display: none;
+}
+#slides .scrollable {
+  *zoom: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+#slides .scrollable:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+.slides-navigation a.prev {
+  left: 0;
+}
+.slides-navigation a.next {
+  right: 0;
+}
+
+
+.navie {
+  margin-left: 10px;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+}
+
+.navie ul {
+    list-style-type: none;
+    padding: 0;
+    margin: none;
+}
+
+
+.navie a.link {
+	font-size:14px; text-decoration:none; background-color: none; font-family: courier new; color: #fff; margin-left: 10px;
+}
+
+
+.slides-pagination {
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  margin-bottom:-2px;
+}
+.slides-pagination a {
+  border: none;
+  /*border-radius: 15px;*/
+  width: 30px;
+  height: 30px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-image: url("images/button4.png");
+  margin: 2px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+.slides-pagination a.current {
+  background: none;
+  background-image: url("images/selectbutton4.png");
+}
+
+
+/********* CUSTOM STYLES BEGIN HERE ********/
+
+#slides .slides-container {
+  display: none;
+
+.container {
+  height: 100%;
+}
+
+/* #midtest {
+	width:600px;
+    height:400px;
+    position:absolute;
+    margin:-200px 0 0 -300px;
+    left:50%;
+    top:50%;
+    background-color: black;
+    display: inherit;
+    z-index: 1;
+}
+
+*/
+
+
+#reel {
+	z-index: -30000;
+}
+video {
+  display:block !important;
+}
+
+.container .content {
+/*  display: inherit; */
+  text-align: center;
+  z-index: 100;
+  width:600px;
+    height:400px;
+    position:absolute;
+    margin:-200px 0 0 -300px;
+    left:50%;
+    top:50%;
+    background: none;
+
+}
+
+.container .content .vertical-align {
+/*  display: inherit;
+  /*table-cell;*/
+/*  vertical-align: middle; */
+}
+
+
+/* #comingsoon {
+	z-index: 35;
+	font-family: courier new; font-size: 50px; color: white; background: black;
+}
+
+
+ */
+
+.center {
+  	width:600px;
+    height:400px;
+    position:absolute;
+    margin:-200px 0 0 -300px;
+    left:50%;
+    top:50%;
+    background: black;
+    display: block;
+    /*-webkit-transition: all 0.5s ease-in-out 0s;
+	  -moz-transition: all 0.5s ease-in-out 0s;
+	  -o-transition: all 0.5s ease-in-out 0s;
+	  -ms-transition: all 0.5s ease-in-out 0s;
+	  transition: all 0.5s ease-in-out 0s;*/
+}
+
+.vimeo-div #play {
+	width:150px;
+  height:80px;
+  position:absolute;
+  margin:-40px 0 0 -75px;
+  left:50%;
+  top:50%;
+  background: none;
+  display: block;
+  border:2px solid #fff;
+}
+#play:hover {
+  border:2px solid #ccc;
+}
+
+/*
+@media only screen and (min-device-width: 1024px) {
+  .container .content .reveal .project-nav .play:hover {
+    background-image: url(./../_img/playOver.svg);
+  }
+
+
+.fade {
+  position: fixed;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: black;
+  z-index: 2;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+.fade.focus {
+  opacity: 0.4;
+}
+.vimeo {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.vimeo iframe {
+  height: 540px;
+  width: 960px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -475px;
+  margin-top: -270px;
+  display: none;
+}
+.vimeo .close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 28px;
+  height: 28px;
+  background: url(./../_img/close.svg) center center no-repeat;
+  cursor: pointer;
+} */
